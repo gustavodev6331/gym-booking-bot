@@ -76,4 +76,6 @@ PASSWORD=your_password
 python main.py
 ```
 
+On the first run, the project automatically creates a local Chrome profile inside the `chrome_profile/` directory to preserve the login session.
+
 
