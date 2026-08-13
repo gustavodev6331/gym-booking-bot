@@ -151,7 +151,7 @@ def main():
     if verified_count == all_booked_classes:
         print("✅ SUCCESS: All bookings verified!")
     else:
-        print(f"MISMATCH: Missing {all_booked_classes - verified_count} bookings")
+        print(f"MISMATCH: Missing {all_booked_classes - verified_count} bookings.")
 
 
 if __name__ == "__main__":
