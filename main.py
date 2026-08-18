@@ -111,7 +111,7 @@ def main():
                     book_class.click()
                     new_waitlisted_joined += 1
                     print(f"You successfully joined the waitlist for "
-                          f"the class {class_name}, at {day_title} at {time_text}")
+                          f"the class {class_name}, at {day_title} at {time_text}, we look forward to having you!")
 
                 elif book_class.text == "Book Class":
                     retry(lambda: attempt_booking(button), description="book class")
@@ -132,7 +132,7 @@ def main():
     print("\n")
     print(f"--- Total Tuesday/Thursday 6pm classes:"
               f" {new_classes_booked+new_waitlisted_joined+already_booked_waitlisted} ---")
-    print("--- VERIFYING ON MY BOOKING PAGE ---")
+    print("---- VERIFYING ON MY BOOKING PAGE ----")
     all_booked_classes = new_classes_booked+new_waitlisted_joined+already_booked_waitlisted
 
 
@@ -151,7 +151,7 @@ def main():
     if verified_count == all_booked_classes:
         print("✅ SUCCESS: All bookings verified!")
     else:
-        print(f"MISMATCH: Missing {all_booked_classes - verified_count} bookings.")
+        print(f"MISMATCH: It's missing {all_booked_classes - verified_count} bookings.")
 
 
 if __name__ == "__main__":
